@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Amor Pryscila ❤️</title>
+    <style>
+        body {
+            background-color: #ffebf0;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #d63384;
+            font-size: 36px;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .btn {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #d63384;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 22px;
+            color: #d63384;
+            font-weight: bold;
+            display: none;
+        }
+        .image {
+            margin-top: 20px;
+            max-width: 90%;
+            height: auto;
+            border-radius: 15px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Para Mi Amor Pryscila 💖</h1>
+    <p>Presiona un botón y descubre algo especial para ti 😍</p>
+
+    <div class="container">
+        <button class="btn" onclick="showMessage(0)">🌹 Razón #1</button>
+        <button class="btn" onclick="showMessage(1)">💘 Razón #2</button>
+        <button class="btn" onclick="showMessage(2)">💋 Razón #3</button>
+        <button class="btn" onclick="showMessage(3)">🎉 Recuerdo Especial</button>
+    </div>
+
+    <p id="message" class="message"></p>
+    <img id="image" class="image" src="" alt="Nuestra foto juntos">
+
+    <script>
+        const messages = [
+            "Eres mi razón de sonreír cada día 💖",
+            "Me encanta cada momento que paso a tu lado 💕",
+            "Tus abrazos son mi lugar favorito 😍",
+            "Nuestro viaje fue uno de los mejores momentos de mi vida ✈️💖"
+        ];
+
+        const images = [
+            "https://misarchivosjadetecom.s3.us-east-1.amazonaws.com/20230226_081629.jpg",
+            "https://misarchivosjadetecom.s3.us-east-1.amazonaws.com/20230228_134553.jpg",
+            "https://misarchivosjadetecom.s3.us-east-1.amazonaws.com/20230306_120038.jpg",
+            "https://misarchivosjadetecom.s3.us-east-1.amazonaws.com/20230306_134351.jpg"
+        ];
+
+        function showMessage(index) {
+            document.getElementById("message").innerText = messages[index];
+            document.getElementById("message").style.display = "block";
+            document.getElementById("image").src = images[index];
+            document.getElementById("image").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
